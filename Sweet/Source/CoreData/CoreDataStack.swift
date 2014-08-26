@@ -9,27 +9,48 @@
 import Foundation
 import CoreData
 
+
 public class CoreDataStack {
-  public typealias errorHandlerType = (error: NSError)->()
+  
   private let coreDataName: String
 
   lazy var managedObjectModel: NSManagedObjectModel = Factory.defaultMOM(self.coreDataName)
   lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = Factory.storeCoordinator(self.coreDataName, mom: self.managedObjectModel)
-  lazy var mainMOC: NSManagedObjectContext = Factory.mainMOCProvider(self.persistentStoreCoordinator)
-
-  public var errorHandler: errorHandlerType
+  public lazy var mainMOC: NSManagedObjectContext = Factory.mainMOCProvider(self.persistentStoreCoordinator)
   
-  init(name: String, errorHandler: errorHandlerType) {
+  public init(name: String) {
     coreDataName = name
-    self.errorHandler = errorHandler
   }
 
-  convenience init() {
-    self.init(name : AppInfo.productName, errorHandler: Factory.defaultErrorHandler())
+  public convenience init() {
+    self.init(name : AppInfo.productName)
   }
 }
 
-// Factory
+//MARK: - Error Handler
+public class ErrorHandler {
+  public typealias errorHandlerType = (NSError)->()
+  public lazy var defaultErrorHandler: errorHandlerType = CoreDataStack.Factory.defaultErrorHandler()
+
+
+  public init(errorHandler: errorHandlerType) {
+    self.defaultErrorHandler = errorHandler
+  }
+
+  public convenience init() {
+    self.init(errorHandler: CoreDataStack.Factory.defaultErrorHandler())
+  }
+
+// MARK: - Singleton
+  public class var sharedInstance : ErrorHandler {
+    struct Static {
+      static let instance = ErrorHandler()
+    }
+    return Static.instance
+  }
+}
+
+//MARK: - Factory
 extension CoreDataStack {
 
 class Factory {
@@ -43,10 +64,8 @@ class Factory {
 
     let coordinator = NSPersistentStoreCoordinator(managedObjectModel: mom)
     var error: NSError?
-    if coordinator.addPersistentStoreWithType(NSSQLiteStoreType,
-      configuration: nil, URL: FileHelper.filePathURL("\(name).sqlite"), options: nil, error: &error) == nil {
-      
-    // FIXME: - Add error handling
+    if coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: FileHelper.filePathURL("\(name).sqlite"), options: nil, error: &error) == nil {
+      ErrorHandler.sharedInstance.defaultErrorHandler(error!)
     }
     return coordinator
   }
@@ -57,7 +76,7 @@ class Factory {
     return managedObjectContext
   }
 
-  class func defaultErrorHandler () -> CoreDataStack.errorHandlerType {
+  class func defaultErrorHandler () -> ErrorHandler.errorHandlerType {
     return { error in
       NSLog("Unresolved Core Data Error \(error), \(error.userInfo)")
       abort()
