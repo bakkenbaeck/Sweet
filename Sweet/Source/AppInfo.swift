@@ -8,8 +8,8 @@
 
 import Foundation
 
-class AppInfo {
-  class var productName: String {
+public class AppInfo {
+  public class var productName: String {
     return NSBundle.mainBundle().infoDictionary["CFBundleName"]! as String
   }
 }

@@ -11,13 +11,13 @@ enum DirectoryType {
   
 }
 
-class FileHelper {
+public class FileHelper {
   
-  class var documentDirectory: NSURL {
+  public class var documentDirectory: NSURL {
     return directoryPath(.DocumentDirectory)
   }
   
-  class func filePathURL(file :String, directory: NSSearchPathDirectory = .DocumentDirectory) -> NSURL {
+  public class func filePathURL(file :String, directory: NSSearchPathDirectory = .DocumentDirectory) -> NSURL {
     return directoryPath(directory).URLByAppendingPathComponent(file);
   }
   

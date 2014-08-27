@@ -10,7 +10,6 @@
 		B504DC0319AC6CE7003C7C13 /* Sweet.h in Headers */ = {isa = PBXBuildFile; fileRef = B504DC0219AC6CE7003C7C13 /* Sweet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B504DC0D19AC6CE7003C7C13 /* SweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC0C19AC6CE7003C7C13 /* SweetTests.swift */; };
 		B504DC1C19AC795D003C7C13 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC1719AC795D003C7C13 /* AppInfo.swift */; };
-		B504DC1E19AC795D003C7C13 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC1A19AC795D003C7C13 /* CoreDataStack.swift */; };
 		B504DC1F19AC795D003C7C13 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC1B19AC795D003C7C13 /* FileHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +21,6 @@
 		B504DC0B19AC6CE7003C7C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B504DC0C19AC6CE7003C7C13 /* SweetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetTests.swift; sourceTree = "<group>"; };
 		B504DC1719AC795D003C7C13 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
-		B504DC1A19AC795D003C7C13 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B504DC1B19AC795D003C7C13 /* FileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,20 +98,11 @@
 		B504DC1619AC795D003C7C13 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B504DC1819AC795D003C7C13 /* CoreData */,
 				B504DC1719AC795D003C7C13 /* AppInfo.swift */,
 				B504DC1B19AC795D003C7C13 /* FileHelper.swift */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
-		};
-		B504DC1819AC795D003C7C13 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				B504DC1A19AC795D003C7C13 /* CoreDataStack.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -221,7 +210,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B504DC1E19AC795D003C7C13 /* CoreDataStack.swift in Sources */,
 				B504DC1C19AC795D003C7C13 /* AppInfo.swift in Sources */,
 				B504DC1F19AC795D003C7C13 /* FileHelper.swift in Sources */,
 			);
