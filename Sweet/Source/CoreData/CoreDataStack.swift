@@ -10,18 +10,24 @@ import Foundation
 import CoreData
 
 
-public class CoreDataStack {
+public class PersistenceLayer {
   
   private let coreDataName: String
+  private var errorHandler: ErrorHandler
 
   lazy var managedObjectModel: NSManagedObjectModel = Factory.defaultMOM(self.coreDataName)
-  lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = Factory.storeCoordinator(self.coreDataName, mom: self.managedObjectModel)
-  public lazy var mainMOC: NSManagedObjectContext = Factory.mainMOCProvider(self.persistentStoreCoordinator)
+  lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = Factory.storeCoordinator(self.coreDataName, mom: self.managedObjectModel, errorHandler: self.errorHandler)
+
+  public lazy var mainMOC: NSManagedObjectContext = Factory.mainMOC(self.persistentStoreCoordinator)
   
-  public init(name: String) {
+  public init(name: String, errorHandler: ErrorHandler) {
     coreDataName = name
+    self.errorHandler = errorHandler
   }
 
+  public convenience init(name : String) {
+    self.init(name : AppInfo.productName, errorHandler: ErrorHandler())
+  }
   public convenience init() {
     self.init(name : AppInfo.productName)
   }
@@ -30,28 +36,39 @@ public class CoreDataStack {
 //MARK: - Error Handler
 public class ErrorHandler {
   public typealias errorHandlerType = (NSError)->()
-  public lazy var defaultErrorHandler: errorHandlerType = CoreDataStack.Factory.defaultErrorHandler()
-
+  public var errorHandler: errorHandlerType
 
   public init(errorHandler: errorHandlerType) {
-    self.defaultErrorHandler = errorHandler
+    self.errorHandler = errorHandler
   }
 
   public convenience init() {
-    self.init(errorHandler: CoreDataStack.Factory.defaultErrorHandler())
+    self.init(errorHandler: Factory.defaultErrorHandler())
   }
 
-// MARK: - Singleton
-  public class var sharedInstance : ErrorHandler {
-    struct Static {
-      static let instance = ErrorHandler()
-    }
-    return Static.instance
+  public func handle(error: NSError) {
+    errorHandler(error)
   }
 }
 
+// MARK: - Actions
+extension PersistenceLayer {
+
+  public func persist() {
+    saveContext(self.mainMOC)
+  }
+  
+  public func saveContext(moc: NSManagedObjectContext) {
+    var error: NSError?
+    if moc.hasChanges && !moc.save(&error) {
+      self.errorHandler.errorHandler(error!)
+    }
+  }
+
+}
+
 //MARK: - Factory
-extension CoreDataStack {
+extension PersistenceLayer {
 
 class Factory {
 
@@ -60,21 +77,27 @@ class Factory {
     return NSManagedObjectModel(contentsOfURL: modelURL)
   }
 
-  class func storeCoordinator(name:String, mom: NSManagedObjectModel) -> NSPersistentStoreCoordinator {
+  class func storeCoordinator(name:String, mom: NSManagedObjectModel, errorHandler: ErrorHandler) -> NSPersistentStoreCoordinator {
 
     let coordinator = NSPersistentStoreCoordinator(managedObjectModel: mom)
     var error: NSError?
     if coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: FileHelper.filePathURL("\(name).sqlite"), options: nil, error: &error) == nil {
-      ErrorHandler.sharedInstance.defaultErrorHandler(error!)
+      errorHandler.handle(error!)
     }
     return coordinator
   }
 
-  class func mainMOCProvider (storeCoordinator:  NSPersistentStoreCoordinator) -> NSManagedObjectContext {
+  class func mainMOC (storeCoordinator:  NSPersistentStoreCoordinator) -> NSManagedObjectContext {
     let managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
     managedObjectContext.persistentStoreCoordinator = storeCoordinator
     return managedObjectContext
   }
+}
+}
+
+extension ErrorHandler {
+
+class Factory {
 
   class func defaultErrorHandler () -> ErrorHandler.errorHandlerType {
     return { error in
