@@ -10,6 +10,6 @@ import Foundation
 
 public class AppInfo {
   public class var productName: String {
-    return NSBundle.mainBundle().infoDictionary["CFBundleName"]! as String
+    return NSBundle.mainBundle().infoDictionary!["CFBundleName"] as String
   }
 }
