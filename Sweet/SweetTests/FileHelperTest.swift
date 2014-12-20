@@ -1,5 +1,5 @@
 //
-//  FileHelperTest.swift
+//  FileHelpTest.swift
 //  Sweet
 //
 //  Created by Konstantin Koval on 20/12/14.
@@ -9,10 +9,20 @@
 import UIKit
 import XCTest
 
-class FileHelperTest: XCTestCase {
+class FileHelpTest: XCTestCase {
   
+  override func setUp() {
+    super.setUp()
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+  }
+  
+  override func tearDown() {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    super.tearDown()
+  }
   
   func testDocumentDirectory() {
+    
     // This is an example of a functional test case.
     let documentDir = FileHelper.documentDirectory
     XCTAssertNotNil(documentDir, "documentDirectory must be not nil")
@@ -32,13 +42,11 @@ class FileHelperTest: XCTestCase {
     checkPathForFileName(path, fileName: fileName)
     XCTAssertTrue(path.hasSuffix("Library/Caches/\(fileName)"), "It should be in Library/Caches folder")
   }
-
+  
   //  MARK:- Private
   
-  private func checkPathForFileName(path: String, fileName:String) {
-    XCTAssertNotNil(path, "Must return a path to file")
-    XCTAssertTrue(path.hasSuffix(fileName), "It has to be correct file name")
-  }
-
-  
+    private func checkPathForFileName(path: String, fileName:String) {
+      XCTAssertNotNil(path, "Must return a path to file")
+      XCTAssertTrue(path.hasSuffix(fileName), "It has to be correct file name")
+    }
 }

@@ -10,22 +10,30 @@
 		B504DC0319AC6CE7003C7C13 /* Sweet.h in Headers */ = {isa = PBXBuildFile; fileRef = B504DC0219AC6CE7003C7C13 /* Sweet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B504DC1C19AC795D003C7C13 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC1719AC795D003C7C13 /* AppInfo.swift */; };
 		B504DC1F19AC795D003C7C13 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC1B19AC795D003C7C13 /* FileHelper.swift */; };
-		B5B3FD471A45CB2B0066EC56 /* AppInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B3FD461A45CB2B0066EC56 /* AppInfoTest.swift */; };
-		B5B3FD481A45CB540066EC56 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC1719AC795D003C7C13 /* AppInfo.swift */; };
-		B5B3FD4A1A45EC9D0066EC56 /* FileHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B3FD491A45EC9D0066EC56 /* FileHelperTest.swift */; };
-		B5B3FD4B1A45ECA20066EC56 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC1B19AC795D003C7C13 /* FileHelper.swift */; };
+		B5FF7C881A46065C0035411E /* Sweet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B504DBFD19AC6CE7003C7C13 /* Sweet.framework */; };
+		B5FF7C8F1A4606A30035411E /* FileHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF7C8E1A4606A30035411E /* FileHelperTest.swift */; };
+		B5FF7C901A4606D80035411E /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC1B19AC795D003C7C13 /* FileHelper.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5FF7C891A46065C0035411E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B504DBF419AC6CE6003C7C13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B504DBFC19AC6CE7003C7C13;
+			remoteInfo = Sweet;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B504DBFD19AC6CE7003C7C13 /* Sweet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sweet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B504DC0119AC6CE7003C7C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B504DC0219AC6CE7003C7C13 /* Sweet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sweet.h; sourceTree = "<group>"; };
-		B504DC0819AC6CE7003C7C13 /* SweetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B504DC0B19AC6CE7003C7C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B504DC1719AC795D003C7C13 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		B504DC1B19AC795D003C7C13 /* FileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
-		B5B3FD461A45CB2B0066EC56 /* AppInfoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoTest.swift; sourceTree = "<group>"; };
-		B5B3FD491A45EC9D0066EC56 /* FileHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelperTest.swift; sourceTree = "<group>"; };
+		B5FF7C821A46065C0035411E /* SweetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5FF7C851A46065C0035411E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5FF7C8E1A4606A30035411E /* FileHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelperTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,22 +44,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B504DC0519AC6CE7003C7C13 /* Frameworks */ = {
+		B5FF7C7F1A46065C0035411E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5FF7C881A46065C0035411E /* Sweet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E4CA810608ACC283B4FE75B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B504DBF319AC6CE6003C7C13 = {
 			isa = PBXGroup;
 			children = (
 				B504DBFF19AC6CE7003C7C13 /* Sweet */,
-				B504DC0919AC6CE7003C7C13 /* SweetTests */,
+				B5FF7C831A46065C0035411E /* SweetTests */,
 				B504DBFE19AC6CE7003C7C13 /* Products */,
+				1E4CA810608ACC283B4FE75B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				B504DBFD19AC6CE7003C7C13 /* Sweet.framework */,
-				B504DC0819AC6CE7003C7C13 /* SweetTests.xctest */,
+				B5FF7C821A46065C0035411E /* SweetTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,24 +99,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B504DC0919AC6CE7003C7C13 /* SweetTests */ = {
-			isa = PBXGroup;
-			children = (
-				B5B3FD461A45CB2B0066EC56 /* AppInfoTest.swift */,
-				B5B3FD491A45EC9D0066EC56 /* FileHelperTest.swift */,
-				B504DC0A19AC6CE7003C7C13 /* Supporting Files */,
-			);
-			path = SweetTests;
-			sourceTree = "<group>";
-		};
-		B504DC0A19AC6CE7003C7C13 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B504DC0B19AC6CE7003C7C13 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		B504DC1619AC795D003C7C13 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +107,23 @@
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
+		};
+		B5FF7C831A46065C0035411E /* SweetTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5FF7C8E1A4606A30035411E /* FileHelperTest.swift */,
+				B5FF7C841A46065C0035411E /* Supporting Files */,
+			);
+			path = SweetTests;
+			sourceTree = "<group>";
+		};
+		B5FF7C841A46065C0035411E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5FF7C851A46065C0035411E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -141,21 +157,22 @@
 			productReference = B504DBFD19AC6CE7003C7C13 /* Sweet.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B504DC0719AC6CE7003C7C13 /* SweetTests */ = {
+		B5FF7C811A46065C0035411E /* SweetTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B504DC1319AC6CE7003C7C13 /* Build configuration list for PBXNativeTarget "SweetTests" */;
+			buildConfigurationList = B5FF7C8B1A46065C0035411E /* Build configuration list for PBXNativeTarget "SweetTests" */;
 			buildPhases = (
-				B504DC0419AC6CE7003C7C13 /* Sources */,
-				B504DC0519AC6CE7003C7C13 /* Frameworks */,
-				B504DC0619AC6CE7003C7C13 /* Resources */,
+				B5FF7C7E1A46065C0035411E /* Sources */,
+				B5FF7C7F1A46065C0035411E /* Frameworks */,
+				B5FF7C801A46065C0035411E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B5FF7C8A1A46065C0035411E /* PBXTargetDependency */,
 			);
 			name = SweetTests;
 			productName = SweetTests;
-			productReference = B504DC0819AC6CE7003C7C13 /* SweetTests.xctest */;
+			productReference = B5FF7C821A46065C0035411E /* SweetTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -170,8 +187,8 @@
 					B504DBFC19AC6CE7003C7C13 = {
 						CreatedOnToolsVersion = 6.0;
 					};
-					B504DC0719AC6CE7003C7C13 = {
-						CreatedOnToolsVersion = 6.0;
+					B5FF7C811A46065C0035411E = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -188,7 +205,7 @@
 			projectRoot = "";
 			targets = (
 				B504DBFC19AC6CE7003C7C13 /* Sweet */,
-				B504DC0719AC6CE7003C7C13 /* SweetTests */,
+				B5FF7C811A46065C0035411E /* SweetTests */,
 			);
 		};
 /* End PBXProject section */
@@ -201,7 +218,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B504DC0619AC6CE7003C7C13 /* Resources */ = {
+		B5FF7C801A46065C0035411E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,18 +237,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B504DC0419AC6CE7003C7C13 /* Sources */ = {
+		B5FF7C7E1A46065C0035411E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5B3FD471A45CB2B0066EC56 /* AppInfoTest.swift in Sources */,
-				B5B3FD481A45CB540066EC56 /* AppInfo.swift in Sources */,
-				B5B3FD4A1A45EC9D0066EC56 /* FileHelperTest.swift in Sources */,
-				B5B3FD4B1A45ECA20066EC56 /* FileHelper.swift in Sources */,
+				B5FF7C8F1A4606A30035411E /* FileHelperTest.swift in Sources */,
+				B5FF7C901A4606D80035411E /* FileHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5FF7C8A1A46065C0035411E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B504DBFC19AC6CE7003C7C13 /* Sweet */;
+			targetProxy = B5FF7C891A46065C0035411E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B504DC0E19AC6CE7003C7C13 /* Debug */ = {
@@ -351,7 +374,7 @@
 			};
 			name = Release;
 		};
-		B504DC1419AC6CE7003C7C13 /* Debug */ = {
+		B5FF7C8C1A46065C0035411E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -363,12 +386,13 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = SweetTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		B504DC1519AC6CE7003C7C13 /* Release */ = {
+		B5FF7C8D1A46065C0035411E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -376,6 +400,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = SweetTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -402,14 +427,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B504DC1319AC6CE7003C7C13 /* Build configuration list for PBXNativeTarget "SweetTests" */ = {
+		B5FF7C8B1A46065C0035411E /* Build configuration list for PBXNativeTarget "SweetTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B504DC1419AC6CE7003C7C13 /* Debug */,
-				B504DC1519AC6CE7003C7C13 /* Release */,
+				B5FF7C8C1A46065C0035411E /* Debug */,
+				B5FF7C8D1A46065C0035411E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
