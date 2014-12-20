@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B504DC0319AC6CE7003C7C13 /* Sweet.h in Headers */ = {isa = PBXBuildFile; fileRef = B504DC0219AC6CE7003C7C13 /* Sweet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B504DC0D19AC6CE7003C7C13 /* SweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC0C19AC6CE7003C7C13 /* SweetTests.swift */; };
 		B504DC1C19AC795D003C7C13 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC1719AC795D003C7C13 /* AppInfo.swift */; };
 		B504DC1F19AC795D003C7C13 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC1B19AC795D003C7C13 /* FileHelper.swift */; };
+		B5B3FD471A45CB2B0066EC56 /* AppInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B3FD461A45CB2B0066EC56 /* AppInfoTest.swift */; };
+		B5B3FD481A45CB540066EC56 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC1719AC795D003C7C13 /* AppInfo.swift */; };
+		B5B3FD4A1A45EC9D0066EC56 /* FileHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B3FD491A45EC9D0066EC56 /* FileHelperTest.swift */; };
+		B5B3FD4B1A45ECA20066EC56 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504DC1B19AC795D003C7C13 /* FileHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +22,10 @@
 		B504DC0219AC6CE7003C7C13 /* Sweet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sweet.h; sourceTree = "<group>"; };
 		B504DC0819AC6CE7003C7C13 /* SweetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B504DC0B19AC6CE7003C7C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B504DC0C19AC6CE7003C7C13 /* SweetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetTests.swift; sourceTree = "<group>"; };
 		B504DC1719AC795D003C7C13 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		B504DC1B19AC795D003C7C13 /* FileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
+		B5B3FD461A45CB2B0066EC56 /* AppInfoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoTest.swift; sourceTree = "<group>"; };
+		B5B3FD491A45EC9D0066EC56 /* FileHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelperTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,8 @@
 		B504DC0919AC6CE7003C7C13 /* SweetTests */ = {
 			isa = PBXGroup;
 			children = (
-				B504DC0C19AC6CE7003C7C13 /* SweetTests.swift */,
+				B5B3FD461A45CB2B0066EC56 /* AppInfoTest.swift */,
+				B5B3FD491A45EC9D0066EC56 /* FileHelperTest.swift */,
 				B504DC0A19AC6CE7003C7C13 /* Supporting Files */,
 			);
 			path = SweetTests;
@@ -219,7 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B504DC0D19AC6CE7003C7C13 /* SweetTests.swift in Sources */,
+				B5B3FD471A45CB2B0066EC56 /* AppInfoTest.swift in Sources */,
+				B5B3FD481A45CB540066EC56 /* AppInfo.swift in Sources */,
+				B5B3FD4A1A45EC9D0066EC56 /* FileHelperTest.swift in Sources */,
+				B5B3FD4B1A45ECA20066EC56 /* FileHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

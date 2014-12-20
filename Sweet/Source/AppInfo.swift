@@ -10,6 +10,11 @@ import Foundation
 
 public class AppInfo {
   public class var productName: String {
-    return NSBundle.mainBundle().infoDictionary!["CFBundleName"] as String
+    var selfBundle = NSBundle(forClass: self)
+    let dic = selfBundle.infoDictionary
+    if let let_dic = dic {
+      return let_dic["CFBundleName"] as String
+    }
+    assertionFailure("can't get CFBundleName")
   }
 }
