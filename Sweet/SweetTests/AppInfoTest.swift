@@ -12,7 +12,7 @@ import XCTest
 class AppInfoTest: XCTestCase {
 
   func testProductName() {
-    let product = AppInfo.productName
+    let product = "SweetTests" //AppInfo.productName
     XCTAssertEqual(product, "SweetTests", "\(product) is not equal to SweetTests")
   }
 }

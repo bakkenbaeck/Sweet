@@ -10,7 +10,7 @@ import Foundation
 
 public class AppInfo {
   public class var productName: String {
-    var selfBundle = NSBundle(forClass: self)
+    var selfBundle = NSBundle.mainBundle()
     let dic = selfBundle.infoDictionary
     if let let_dic = dic {
       return let_dic["CFBundleName"] as String
