@@ -1,6 +1,5 @@
 language: objective-c
 osx_image: xcode61
 
-xcode_project: Sweet/Sweet.xcodeproj # path to your xcodeproj folder
-xcode_scheme: SweetTests
-
+script:
+- xctool -project Sweet/Sweet.xcodeproj -scheme SweetTests build test
