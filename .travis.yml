@@ -1,5 +1,6 @@
 language: objective-c
 osx_image: xcode61
 
+ 
 script:
-- xctool -project Sweet/Sweet.xcodeproj -scheme SweetTests build test
+- xcodebuild -project Sweet/Sweet.xcodeproj -scheme SweetTests test
