@@ -1,7 +1,7 @@
 Sweet
 =====
 
-[![Build Status](https://travis-ci.org/konstantinkoval/Sweet.svg?branch=develop)](https://travis-ci.org/konstantinkoval/Sweet)
+[![Build Status](https://travis-ci.org/kostiakoval/Sweet.svg?branch=develop)](https://travis-ci.org/kostiakoval/Sweet)
 
 A collection of common small boilerplate in Swift
 
