@@ -35,6 +35,6 @@ public class FileHelper {
 
 //  MARK:- Private
   private class func directoryPath(dir: NSSearchPathDirectory) -> String {
-    return NSSearchPathForDirectoriesInDomains(dir, .UserDomainMask, true).first as String
+    return NSSearchPathForDirectoriesInDomains(dir, .UserDomainMask, true).first as! String
   }
 }

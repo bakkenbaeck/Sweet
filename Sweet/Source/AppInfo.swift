@@ -13,7 +13,7 @@ public class AppInfo {
     var selfBundle = NSBundle.mainBundle()
     let dic = selfBundle.infoDictionary
     if let let_dic = dic {
-      return let_dic["CFBundleName"] as String
+      return let_dic["CFBundleName"] as! String
     }
     assertionFailure("can't get CFBundleName")
   }
