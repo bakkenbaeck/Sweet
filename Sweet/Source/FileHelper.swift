@@ -7,9 +7,6 @@
 //
 
 import Foundation
-enum DirectoryType {
-  
-}
 
 public class FileHelper {
   
