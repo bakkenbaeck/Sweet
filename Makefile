@@ -1,2 +1,9 @@
+PROJECT = Sweet/Sweet.xcodeproj
+SCHEME = SweetTests
+WORKSPACE
+
+DEVICE_HOST = platform='iOS Simulator',OS='8.3',name='iPhone 6'
+
+
 ci:
-	xcodebuild -project Sweet/Sweet.xcodeproj -scheme SweetTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.3' build test | xcpretty -c; exit ${PIPESTATUS[0]}
+	xcodebuild -project $(PROJECT) -scheme $(SCHEME) -sdk iphonesimulator -destination $(DEVICE_HOST) build test | xcpretty -c; exit ${PIPESTATUS[0]}
