@@ -1,9 +1,7 @@
 language: objective-c
 osx_image: beta-xcode6.3
 
-cache:
-  - bundler
-  - cocoapods
+cache: bundler
 
 script:
   - make ci
