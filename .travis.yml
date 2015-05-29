@@ -6,4 +6,3 @@ cache: bundler
 
 script:
   - make ci
-
