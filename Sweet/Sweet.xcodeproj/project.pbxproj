@@ -31,6 +31,9 @@
 		B504DC0219AC6CE7003C7C13 /* Sweet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sweet.h; sourceTree = "<group>"; };
 		B504DC1719AC795D003C7C13 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		B504DC1B19AC795D003C7C13 /* FileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
+		B5A6175F1B184A3500C132EB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		B5A617601B184A3500C132EB /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
+		B5A617611B184A3500C132EB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B5FF7C821A46065C0035411E /* SweetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FF7C851A46065C0035411E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5FF7C8E1A4606A30035411E /* FileHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelperTest.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		B504DBF319AC6CE6003C7C13 = {
 			isa = PBXGroup;
 			children = (
+				B5A6175E1B184A2000C132EB /* Metadata */,
 				B504DBFF19AC6CE7003C7C13 /* Sweet */,
 				B5FF7C831A46065C0035411E /* SweetTests */,
 				B504DBFE19AC6CE7003C7C13 /* Products */,
@@ -107,6 +111,16 @@
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
+		};
+		B5A6175E1B184A2000C132EB /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6175F1B184A3500C132EB /* .gitignore */,
+				B5A617601B184A3500C132EB /* .travis.yml */,
+				B5A617611B184A3500C132EB /* README.md */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
 		};
 		B5FF7C831A46065C0035411E /* SweetTests */ = {
 			isa = PBXGroup;
