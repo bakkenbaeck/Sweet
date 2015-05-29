@@ -1,7 +1,9 @@
 language: objective-c
 osx_image: beta-xcode6.3
+sudo: false
 
 cache: bundler
 
 script:
   - make ci
+
