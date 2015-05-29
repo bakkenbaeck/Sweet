@@ -4,5 +4,9 @@ sudo: false
 
 cache: bundler
 
+before_install:
+  #- xcrun instruments -w "iPad Air (8.1 Simulator)" || echo "(Pre)Launched the simulator."
+  - xcrun simctl boot "iPhone 6"
+
 script:
   - make ci
