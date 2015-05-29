@@ -9,12 +9,12 @@
 import Foundation
 
 public class AppInfo {
-    
+
   public class var productName: String {
-    
-    if let dic = NSBundle.mainBundle().infoDictionary {
-      return dic ["CFBundleName"] as String
+
+    if let dic = NSBundle.mainBundle().infoDictionary, let str = dic["CFBundleName"] as? String {
+        return str
     }
-    assertionFailure("can't get CFBundleName")
+    fatalError("can't get CFBundleName")
   }
 }
