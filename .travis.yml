@@ -1,12 +1,8 @@
 language: objective-c
 osx_image: beta-xcode6.3
+sudo: false
 
-cache:
-  - bundler
-  - cocoapods
-
-before_install:
-  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+cache: bundler
 
 script:
-  - xcodebuild -project Sweet/Sweet.xcodeproj -scheme SweetTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.3' build test | xcpretty -c; exit ${PIPESTATUS[0]}
+  - make ci
