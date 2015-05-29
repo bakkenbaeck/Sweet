@@ -5,8 +5,5 @@ cache:
   - bundler
   - cocoapods
 
-before_install:
-  - bundle install
-
 script:
   - make ci
