@@ -1,8 +1,12 @@
 language: objective-c
 osx_image: beta-xcode6.3
 
+cache:
+  - bundler
+  - cocoapods
+
 before_install:
-- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-- xcodebuild -project Sweet/Sweet.xcodeproj -scheme SweetTests build test | xcpretty -c; exit ${PIPESTATUS[0]}
+  - xcodebuild -project Sweet/Sweet.xcodeproj -scheme SweetTests build test | xcpretty -c; exit ${PIPESTATUS[0]}
