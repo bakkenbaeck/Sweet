@@ -1,6 +1,8 @@
 language: objective-c
 osx_image: beta-xcode6.3
 sudo: false
+podfile: Example/Podfile
+
 
 cache: bundler
 
@@ -10,3 +12,4 @@ before_install:
 
 script:
   - make ci
+  - pod lib lint --quick
