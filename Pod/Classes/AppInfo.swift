@@ -12,8 +12,8 @@ public class AppInfo {
 
   public class var productName: String {
 
-    if let dic = NSBundle.mainBundle().infoDictionary, let str = dic["CFBundleName"] as? String {
-        return str
+    if let dic = NSBundle.mainBundle().infoDictionary, str = dic["CFBundleName"] as? String {
+      return str
     }
     fatalError("can't get CFBundleName")
   }

@@ -15,7 +15,8 @@ public class FileHelper {
   }
 
   public static func filePath(file :String, directory: NSSearchPathDirectory = .DocumentDirectory) -> String {
-    return directoryPath(directory).stringByAppendingPathComponent(file)
+    let st: NSString = directoryPath(directory)
+    return st.stringByAppendingPathComponent(file)
   }
 
   public class func sharedApplicationGroupContainer(groupName: String) -> NSURL {
@@ -32,6 +33,6 @@ public class FileHelper {
 
 //  MARK:- Private
   private static func directoryPath(dir: NSSearchPathDirectory) -> String {
-    return NSSearchPathForDirectoriesInDomains(dir, .UserDomainMask, true).first as! String
+    return NSSearchPathForDirectoriesInDomains(dir, .UserDomainMask, true).first!
   }
 }
