@@ -1,0 +1,6 @@
+framework module Pods_Sweet_Tests {
+  umbrella header "Pods-Sweet_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
